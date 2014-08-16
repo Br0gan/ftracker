@@ -12,7 +12,7 @@ with requests.Session() as c:
                         userid=USERID, password=PASSWORD, _submit="Sign In")
 
     c.post(url, data = login_data)
-    page = c.get('http://teambuddy.football.cbssports.com/print/csv/teams/roster-grid', stream=True)
+    page = c.get('http://xxxxxx.football.cbssports.com/print/csv/teams/roster-grid', stream=True)
     if page.status_code == 200:
         print('sucess')
         with open('grid.csv', 'wb') as f:
